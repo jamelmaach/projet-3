@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400&family=Shrikhand&display=swap");
+$box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+
+  padding: 1px;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+main .search {
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.2rem;
+  box-shadow: inset 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.search i {
+  font-size: 20px;
+}
+
+/* section reservation*/
+
+.reservation {
+  text-align: center;
+  background-color: #f7f7f7;
+  & h2 {
+    font-size: 25px;
+    margin: 0;
+    padding-top: 1.5rem;
+  }
+  & p {
+    font-size: 1.5rem;
+  }
+  & button {
+    background-image: linear-gradient(to top, $primary-color, $secondary-color);
+    color: white;
+    padding: 1.3rem;
+    font-size: 20px;
+    border-radius: 2rem;
+    border: none;
+    margin-bottom: 4rem;
+    box-shadow: $box-shadow;
+    & a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.fonctionnement h2 {
+  padding-left: 40px;
+  margin-top: 50px;
+}
+i:hover {
+  cursor: pointer;
+  color: $primary-color;
+}
+
+.fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  & a {
+    text-decoration: none;
+  }
+  & li {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    border-radius: 1rem;
+    list-style-type: none;
+    display: flex;
+    box-shadow: $box-shadow;
+    & i {
+      color: grey;
+      &:hover {
+        color: purple;
+      }
+    }
+
+    & div {
+      padding: 5px 10px;
+      transform: translateX(-30px);
+      color: black;
+    }
+    .number {
+      color: white;
+      background-color: $primary-color;
+      border-radius: 50%;
+    }
+  }
+}
+
+.menu {
+  background-color: #f7f7f7;
+  margin-top: 4rem;
+
+  padding: 4rem 2rem;
+  & .menu__card {
+    display: grid;
+
+    gap: 1rem;
+    & .card {
+      box-shadow: $box-shadow;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 1rem;
+      & .card-description {
+        padding-left: 20px;
+        position: relative;
+        & i.fa-regular {
+          position: absolute;
+          right: 2rem;
+          top: 0.3rem;
+
+          font-size: 25px;
+        }
+        & i.fas {
+          opacity: 0;
+
+          position: absolute;
+          right: 2rem;
+          top: 0.3rem;
+          transform: scale(0);
+
+          font-size: 25px;
+        }
+        & div:hover i.fas {
+          opacity: 1;
+          background: linear-gradient(red, blue);
+          -webkit-background-clip: text;
+          color: transparent;
+          transform: scale(1);
+          transition: 0.3s linear;
+        }
+        & div:hover i.fa-regular {
+          transform: scale(0.9);
+          transition: 0.3s linear;
+        }
+        & p {
+          margin-top: -1rem;
+        }
+      }
+
+      & .card__image {
+        background-size: cover;
+        height: 12rem;
+        border-radius: 1rem 1rem 0 0;
+        display: flex;
+        justify-content: flex-end;
+
+        & div {
+          width: 4rem;
+          height: 1rem;
+          padding: 10px 20px;
+          margin-right: 1rem;
+          color: darken($color: $tertiary-color, $amount: 35%);
+          background-color: $tertiary-color;
+          border-radius: 0.2rem;
+          transform: translateY(20px);
+        }
+      }
+      & .image1 {
+        background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+      }
+      & .image2 {
+        background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+      }
+      & .image3 {
+        background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+      }
+      & .image4 {
+        background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #353535;
+  color: #f8f8f8;
+  padding-left: 30px;
+  & .info {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  & p {
+    margin: 0;
+  }
+  & div {
+    display: flex;
+    gap: 0.5rem;
+  }
+  & h2 {
+    font-family: "Shrikhand", cursive;
+    font-weight: 30;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    font-size: 25px;
+    margin: 0;
+  }
+  & span {
+    padding-left: 7px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .fonctionnement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+  }
+  menu {
+    & h2 {
+      text-align: center;
+    }
+  }
+  .menu__card {
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    & .info {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .reservation {
+    & br {
+      display: none;
+    }
+  }
+  .fonctionnement {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+
+    & h2 {
+      transform: translateY(-1rem);
+    }
+    & ul {
+      flex-direction: row;
+    }
+  }
+  .menu {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    & h2 {
+      text-align: center;
+    }
+    & .menu__card {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 20px;
+    }
+  }
+  footer {
+    & .info {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    & h2 {
+      text-align: center;
+    }
+  }
+}
