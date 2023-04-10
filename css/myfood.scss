@@ -50,6 +50,7 @@ main .search {
     border: none;
     margin-bottom: 4rem;
     box-shadow: $box-shadow;
+    cursor: pointer;
     & a {
       text-decoration: none;
       color: white;
@@ -70,6 +71,7 @@ i:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  cursor: pointer;
   & a {
     text-decoration: none;
   }
@@ -170,16 +172,16 @@ i:hover {
         }
       }
       & .image1 {
-        background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+        background-image: url(../images/restaurants/la\ palette\ du\ gout.jpg);
       }
       & .image2 {
-        background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+        background-image: url(../images/restaurants/note\ enchantée.jpg);
       }
       & .image3 {
         background-image: url(../images/restaurants/1.jpg);
       }
       & .image4 {
-        background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+        background-image: url(../images/restaurants/sens.jpg);
       }
     }
   }

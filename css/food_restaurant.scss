@@ -4,11 +4,20 @@ $box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin vertical-center {
+  display: flex;
+  align-items: center;
+}
 header {
   & div {
-    display: flex;
+    @include vertical-center;
     justify-content: flex-start;
-    align-items: center;
     gap: 5rem;
     padding-left: 2rem;
     & h1 {
@@ -17,7 +26,7 @@ header {
       margin: 0.5rem;
     }
   }
-  & a{
+  & a {
     text-decoration: none;
     color: inherit;
   }
@@ -30,8 +39,14 @@ main {
   background-color: #f7f7f7;
   & .image {
     height: 20rem;
-    background-image: url(../image/1.jpg);
+
     background-size: cover;
+  }
+  .a_la_francaise {
+    background-image: url(../image/1.jpg);
+  }
+  .la_note_enchantee {
+    background-image: url(../images/restaurants/note\ enchantée.jpg);
   }
   & .container {
     background-color: #f7f7f7;
@@ -56,7 +71,6 @@ main {
         font-size: 25px;
         font-family: "Shrikhand", cursive;
         font-weight: 100;
-        
       }
       & i {
         font-size: 25px;
@@ -88,16 +102,16 @@ main {
     border-radius: 1rem;
     margin: 1rem;
     box-shadow: $box-shadow;
-    &:nth-child(1){
+    &:nth-child(1) {
       animation: apparition 1s 0.6s ease-out forwards;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       animation: apparition 1s 0.8s ease-out forwards;
     }
-    &:nth-child(3){
+    &:nth-child(3) {
       animation: apparition 1s 1s ease-out forwards;
     }
-    &:nth-child(4){
+    &:nth-child(4) {
       animation: apparition 1s 1.4s ease-out forwards;
     }
 
@@ -112,7 +126,7 @@ main {
       justify-content: space-between;
       padding-right: 2rem;
       gap: rem;
-      & >:first-child{
+      & > :first-child {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -137,11 +151,12 @@ main {
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: grab;
+  & h3 {
+    padding-left: 5px;
+  }
 }
 .icone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
   background-color: $tertiary-color;
   height: auto;
   width: 0px;
@@ -255,8 +270,8 @@ footer {
   }
 }
 
-@keyframes apparition{
-  100%{
+@keyframes apparition {
+  100% {
     opacity: 1;
     transform: none;
   }
