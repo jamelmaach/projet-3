@@ -37,6 +37,9 @@ main .la_note_enchantee {
 main .la_palette_du_gout {
   background-image: url(../images/restaurants/la\ palette\ du\ gout.jpg);
 }
+main .le_delice_des_sens {
+  background-image: url(../images/restaurants/sens.jpg);
+}
 main .container {
   background-color: #f7f7f7;
   border-radius: 2rem 2rem 0 0;
